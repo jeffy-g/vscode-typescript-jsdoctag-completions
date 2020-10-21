@@ -1,0 +1,80 @@
+{
+  "name": "vscode-typescript-jsdoctag-completions",
+  "displayName": "JSDoc Tag Completions Extension",
+  "description": "Support JSDoc Tag completions with typescript/javascript",
+  "version": "1.0.1",
+  "icon": "icon.png",
+  "publisher": "jeffy-g",
+  "license": "MIT",
+  "main": "./lib/extension.js",
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jeffy-g/vscode-typescript-jsdoctag-completions"
+  },
+  "bugs": {
+    "url": "https://github.com/jeffy-g/vscode-typescript-jsdoctag-completions/issues"
+  },
+  "homepage": "https://github.com/jeffy-g/vscode-typescript-jsdoctag-completions#readme",
+  "categories": [
+    "Programming Languages"
+  ],
+  "config": {
+    "warn": "Caution: Remember to install the module when the plugin version is updated!"
+  },
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact"
+  ],
+  "contributes": {
+    "typescriptServerPlugins": [
+      {
+        "name": "typescript-jsdoctag-completions-plugin",
+        "enableForWorkspaceTypeScriptVersions": true
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "JSDocTag Completions Plugin Settings",
+      "properties": {
+        "jsdoctag-completions.preset": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "default",
+                "closure"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "default": "default",
+          "description": "choose builtin preset or specify preset module path\n`default` preset is typescript builtin jsdoc tags with additional jsdoc.app inline tag"
+        },
+        "jsdoctag-completions.locale": {
+          "type": "string",
+          "description": "If locale is not set in the typescript project,\nit will be forced this value or native OS locale."
+        },
+        "jsdoctag-completions.verbose": {
+          "type": "boolean",
+          "description": "enable/disable debug log to tsserver log file",
+          "default": true
+        },
+        "jsdoctag-completions.vscode": {
+          "type": "boolean",
+          "description": "This means the plugin config is the value defined on workspace settings in vscode.\nThis value is set to `true` by default and is used internally and should not be changed intentionally",
+          "default": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "typescript-jsdoctag-completions-plugin": "^1.3.1-beta"
+  }
+}
