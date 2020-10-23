@@ -2,7 +2,7 @@
   "name": "vscode-typescript-jsdoctag-completions",
   "displayName": "JSDoc Tag Completions Extension",
   "description": "Support JSDoc Tag completions with typescript/javascript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "icon.png",
   "publisher": "jeffy-g",
   "license": "MIT",
@@ -18,6 +18,19 @@
     "url": "https://github.com/jeffy-g/vscode-typescript-jsdoctag-completions/issues"
   },
   "homepage": "https://github.com/jeffy-g/vscode-typescript-jsdoctag-completions#readme",
+  "keywords": [
+    "jsdoc",
+    "jsdoc tag",
+    "typescript",
+    "javascript",
+    "plugin",
+    "tsserver",
+    "language",
+    "comment",
+    "completions",
+    "IntelliSense",
+    "vscode-extension"
+  ],
   "categories": [
     "Programming Languages"
   ],
@@ -75,6 +88,6 @@
     }
   },
   "dependencies": {
-    "typescript-jsdoctag-completions-plugin": "^1.3.1-beta"
+    "typescript-jsdoctag-completions-plugin": "^1.3.2-beta"
   }
 }
