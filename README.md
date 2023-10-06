@@ -47,15 +47,20 @@ This extension contributes the following variables to the [settings](https://cod
     "target": "es2019",
     "module": "esnext",
     "strict": true,
-    // plugin refers to the value of `@compilerOptions/locale`
-    // If not set, use the OS locale
-    "locale": "ja",
+    // In TypeScript 5.x, compilerOptions/locale was removed,
+    // so Moved locale to plugin settings.
+    // however, for older versions of ts,
+    // this value is still referenced as before from this plugin.
+    // "locale": "ja",
     "plugins": [
       {
         "name": "typescript-jsdoctag-completions-plugin",
         // Plugin specific configuration
         "preset": "closure", // builtin preset is "default" and "closure"
-        "verbose": true      // enable/disable plugin logging
+        "verbose": true,     // enable/disable plugin logging
+        // plugin refers to the value of `@compilerOptions/locale`
+        // If not set, use the OS locale
+        "locale": "ja"
       }
     ]
   }
