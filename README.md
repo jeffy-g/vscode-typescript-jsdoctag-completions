@@ -56,9 +56,12 @@ This extension contributes the following variables to the [settings](https://cod
       {
         "name": "typescript-jsdoctag-completions-plugin",
         // Plugin specific configuration
-        "preset": "closure", // builtin preset is "default" and "closure"
+        // builtin preset is "default" and "closure".
+        // If you want to use a jsdoc tag preset that you have defined yourself based on the preset API,
+        // specify the path of that module.
+        "preset": "closure",
         "verbose": true,     // enable/disable plugin logging
-        // plugin refers to the value of `@compilerOptions/locale`
+        // plugin refers to the value of `@compilerOptions/plugins[@name=typescript-jsdoctag-completions-plugin]/locale`
         // If not set, use the OS locale
         "locale": "ja"
       }
