@@ -1,3 +1,6 @@
+[![DeepScan grade](https://deepscan.io/api/teams/3135/projects/20944/branches/587729/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3135&pid=20944&bid=587729)
+![GitHub](https://img.shields.io/github/license/jeffy-g/vscode-typescript-jsdoctag-completions?style=flat)
+
 > # JSDoc Tag Completions extension For VS Code
 
 Integrates [typescript-jsdoctag-completions-plugin](https://github.com/jeffy-g/typescript-jsdoctag-completions-plugin-beta) into VS Code.
